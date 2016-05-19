@@ -40,4 +40,12 @@ public class FibonacciTest {
     assertSame(gen1, gen3);
     assertSame(gen2, gen3);
   }
+
+  @Test
+  public void testNumbersLessThanZero() {
+    Fibonacci generator = Fibonacci.getGenerator();
+    assertEquals(generator.get(-1), 1);
+    assertEquals(generator.get(-10), 55);
+    assertEquals(generator.get(-20), 6765);
+  }
 }

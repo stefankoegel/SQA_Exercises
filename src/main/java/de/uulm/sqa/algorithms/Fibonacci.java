@@ -28,7 +28,7 @@ public class Fibonacci {
   }
 
   /**
-   * Returns the nth fibonacci number.
+   * Returns the nth fibonacci number. If nth is negative, treat it as a positive number.
    */
   public int get(int nth) {
     if (nth < fibonaccis.size()) {
