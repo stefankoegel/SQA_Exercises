@@ -1,6 +1,7 @@
 package de.uulm.sqa.algorithms;
 
 import java.util.Vector;
+import java.util.regex.Matcher;
 
 /**
  * Singleton fibonaci generator with memorisation.
@@ -31,6 +32,8 @@ public class Fibonacci {
    * Returns the nth fibonacci number. If nth is negative, treat it as a positive number.
    */
   public int get(int nth) {
+    nth = Math.abs(nth);
+
     if (nth < fibonaccis.size()) {
       return fibonaccis.get(nth);
     }
