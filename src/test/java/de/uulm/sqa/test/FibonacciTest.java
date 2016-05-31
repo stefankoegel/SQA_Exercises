@@ -26,7 +26,7 @@ public class FibonacciTest {
     assertEquals(generator.get(10), 55);
     assertEquals(generator.get(20), 6765);
     assertEquals(generator.get(30), 832040);
-    assertEquals(generator.get(40), 63245986);
+    assertEquals(generator.get(40), 102334155);
   }
 
   @Test

@@ -31,6 +31,9 @@ public class Fibonacci {
    * Returns the nth fibonacci number. If nth is negative, treat it as a positive number.
    */
   public int get(int nth) {
+	if (nth < 0) {
+	  nth = -nth;
+	}
     if (nth < fibonaccis.size()) {
       return fibonaccis.get(nth);
     }
