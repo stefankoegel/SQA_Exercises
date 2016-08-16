@@ -1,12 +1,11 @@
 package de.uulm.sqa.test;
 
 
+import de.uulm.sqa.algorithms.Fibonacci;
+import org.junit.Test;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertSame;
-
-import de.uulm.sqa.algorithms.Fibonacci;
-
-import org.junit.Test;
 
 
 /**
@@ -17,16 +16,19 @@ public class FibonacciTest {
   @Test
   public void testFibonacciImplementation() {
     Fibonacci generator = Fibonacci.getGenerator();
-    assertEquals(generator.get(0), 0);
-    assertEquals(generator.get(1), 1);
-    assertEquals(generator.get(2), 1);
-    assertEquals(generator.get(3), 2);
-    assertEquals(generator.get(4), 3);
-    assertEquals(generator.get(5), 5);
-    assertEquals(generator.get(10), 55);
-    assertEquals(generator.get(20), 6765);
-    assertEquals(generator.get(30), 832040);
-    assertEquals(generator.get(40), 63245986);
+    //errors:
+    // - expected as first argument, actual as second argument
+    // - last assert: expected should be 102334155 because 63245986 is the 39th fibonacci number
+    assertEquals(0, generator.get(0));
+    assertEquals(1, generator.get(1));
+    assertEquals(1, generator.get(2));
+    assertEquals(2, generator.get(3));
+    assertEquals(3, generator.get(4));
+    assertEquals(5, generator.get(5));
+    assertEquals(55, generator.get(10));
+    assertEquals(6765, generator.get(20));
+    assertEquals(832040, generator.get(30));
+    assertEquals(102334155, generator.get(40));
   }
 
   @Test
